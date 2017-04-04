@@ -15,12 +15,16 @@ module.exports = {
     path: BUILD_PATH,
     filename: 'bundle-[hash:5].js',
   },
+  devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
     hot: true,
     host: '',
     port: '8088',
     contentBase: ROOT_PATH,
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
   },
   module: {
     rules: [/*{

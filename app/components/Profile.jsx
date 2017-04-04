@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Hobby from './Hobby.jsx';
+import Hobby from './Hobby';
 
 const propTypes = {
   name: PropTypes.string.isRequired
@@ -47,10 +47,10 @@ class Profile extends React.Component {
   render() {
     return (
       <div>
-        <h1>My name is {this.props.name}</h1>
+        <h2>My name is {this.props.name}</h2>
         <button onClick={this.likedCallback}>Like Me!</button>
-        <h2>How many times you liked me ： {this.state.liked}</h2>
-        <h2>My hobbies：</h2>
+        <h3>How many times you liked me ： {this.state.liked}</h3>
+        <h3>My hobbies：</h3>
         <ul>
           {this.state.hobbies.map((hobby, i) => <Hobby key={i} hobby={hobby} />)}
         </ul>
